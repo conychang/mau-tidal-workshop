@@ -1,12 +1,14 @@
 # DAY1｜イントロダクション
 
 メディアテクノロジー実習でTidalCycles（ないしSuperCollider）のワークショップを担当する岡千穂です。<br>私は普段、即興的なオペレーションを含むコンピューターミュージック、または予め書かれたスコアのある実験的な音楽に親しんでいます。
-- [EEMT Yasunao Tone - Clapping Piece (1963) Clapping piece instruction.pdf
-](https://vimeo.com/650992697)
+- [EEMT Yasunao Tone - Clapping Piece (1963) Clapping piece
+](https://www.youtube.com/watch?v=E_vTRE9N1Xs)
+- [Instruction](https://drive.google.com/file/d/1xPiOaN7etlZH8bn6S1LUISLm4vTGM8DE/view?usp=sharing) *制限付きなので岡しかみれません。
 
 練習や演奏でふと気になったこと、アイディアを、音楽の演奏とは言いづらい形で見せることもあります。例えばカーソルと自動化プログラム、ジェンガ、自転車とサインウェーブを使うイヴェント。
 
 - [Nothtoやkndによる"公園コンサート"とは!?](https://togetter.com/li/184897) <br>2022年5月の公園コンサート(カトーマサカーとのコラボレーション)に[出ました](https://twitter.com/chihooka/status/1521855623008202753?s=20&t=KgyMGKaN5K4oewKIIR6mRQ)。自転車に乗りながらサインウェーブを演奏しました。公園の端は20Hz、もう片方の端では20000Hzのスイープです。20-20000Hzというのは、人間の可聴域です。<br>
+- Playing Beuys’s Records - Concert https://vimeo.com/650992697
 - [[No Bounds x Hope Works] Alpaca Session 1.1 - Chiho Oka](https://www.youtube.com/watch?v=4DTn2km1378)
 
 [好きなBPMは160](https://soundcloud.com/crackmagazine/unfold-dj-fulltono-at-the-white-hotel-manchester)。好きな合成方式はフリケンシー・モジュレーション(FM)。
