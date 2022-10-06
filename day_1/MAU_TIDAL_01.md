@@ -1,4 +1,4 @@
-# イントロダクション
+# DAY1｜イントロダクション
 
 メディアテクノロジー実習でTidalCycles（ないしSuperCollider）のワークショップを担当する岡千穂です。<br>私は普段、即興的なオペレーションを含むコンピューターミュージック、または予め書かれたスコアのある実験的な音楽に親しんでいます。
 - [EEMT Yasunao Tone - Clapping Piece (1963) Clapping piece instruction.pdf
@@ -28,6 +28,8 @@
 
 大学の学部生のとき、[ライブコーディングで音とコンピュータのことをすごく勉強しながら旅などをし、Algoraveというパーティーを観察していたことから、](https://docs.google.com/document/d/1NHtM2UoC4gtNNszc5TizxmPcT3mXieXSpMOp_l0oECo/edit?usp=sharing)単に音、音響合成ソフトウェアに関する技術を学ぶだけではなく、または音楽を作曲したり演奏するということだけでなく、音楽を構成する音というメディア、それを生成するシステム、または、そういったシステムを鑑賞者はどう享受するのか、音楽を取り巻く文化圏について、深く考える第一歩になったと思っています。<br>今回は、この頃に参加したシェフィールドでのワークショップなどを思い出しながら、授業を構成していきたいと思います。
 
+***
+
 ## Algoraveとは？
 - https://algorave.com/about/
 - https://github.com/Algorave/guidelines
@@ -36,49 +38,53 @@
 >
 >これは何も新しい考え方ではない。しかしAlgoraveは音楽を作り、音楽で踊る人間に焦点を合わせている。Algoraveのミュージシャンたちは自らのソフトウェアがクリエイティヴであるように装ったりせず、自分たちの作る音楽に対する責任を引き受け、持っている手段は何でも使って、音楽を形作る。より重要なのは、ミュージシャンがしていることにではなく音楽に、そしてそれに合わせて踊る人に焦点を合わせることだ。Algoraveは過去のレイヴとは異質なもの、奇妙な、アルゴリズムによって処理された未来的なリズムとビートを受け入れ、取り入れる。ミュージシャンがこのことに意味をもたらし、本当にクリエイティヴなことを行なって素晴らしいパーティーにできるかどうかは、ダンスフロアにいる人たちの助けによるところが大きい。
 
+***
+
 ## TidalCyclesを使った演奏など
 ### Yaxu (Alex McLean)
-    Alex McLean (Yaxu) live on DOMMUNE tokyo, 14 Nov 2018
-    https://www.youtube.com/watch?v=dIpzU71LAQQ
+Alex McLean (Yaxu) live on DOMMUNE tokyo, 14 Nov 2018
+https://www.youtube.com/watch?v=dIpzU71LAQQ
 ### Kindohm
-    Meme Booth https://conditionalrecs.bandcamp.com/album/meme-booth
-    YouTube https://www.youtube.com/watch?v=SZwhETSFiDw
+Meme Booth https://conditionalrecs.bandcamp.com/album/meme-booth
+YouTube https://www.youtube.com/watch?v=SZwhETSFiDw
 ### moxus
-    https://www.youtube.com/watch?v=UDQtb6lyucY
+  https://www.youtube.com/watch?v=UDQtb6lyucY
 ### Beatrice Dillon
-    Workaround https://beatricedillon.bandcamp.com/album/workaround
+Workaround https://beatricedillon.bandcamp.com/album/workaround
 
 ### コラボレーションについて
 #### [Troop](https://github.com/Qirky/Troop)を使ったセッション
 
-    Heavy Lifting x Graham Dunning - Live coding jam
-    https://www.youtube.com/watch?v=ca3J1cztnrc
+Heavy Lifting x Graham Dunning - Live coding jam
+https://www.youtube.com/watch?v=ca3J1cztnrc
 
 #### [Estuary](https://estuary.mcmaster.ca/)を使ったセッション  
-    SuperContinent performance at NIME 2021
-    https://www.youtube.com/watch?v=7S0hFRui9GA
+SuperContinent performance at NIME 2021
+https://www.youtube.com/watch?v=7S0hFRui9GA
 
 #### 演奏者同士の交流
-    Tidal Club Longest Night Marathon 2021: 21-23 December
-    https://night.tidalcycles.org/
-    YouTubeのアーカイブ https://youtube.com/playlist?list=PLMBIpibV-wQIrjhBgxrwXTnoFpw-PWzNp
+Tidal Club Longest Night Marathon 2021: 21-23 December
+https://night.tidalcycles.org/<br>
+YouTubeのアーカイブ https://youtube.com/playlist?list=PLMBIpibV-wQIrjhBgxrwXTnoFpw-PWzNp
 
 ## TidalCyclesじゃないですが…
 ### Renick Bell
-    https://empty-lake.u-i-q.org/
-    ライブセットの録音 https://renickbell.bandcamp.com/album/nucenosis-set-200425
+https://empty-lake.u-i-q.org/<br>
+ライブセットの録音 https://renickbell.bandcamp.com/album/nucenosis-set-200425
 ### Rian Treanor
-    https://riantreanor.bandcamp.com/album/file-under-uk-metaplasm
+https://riantreanor.bandcamp.com/album/file-under-uk-metaplasm
 ### Mark Fell
-    https://www.youtube.com/watch?v=esBfmVQWlhI
-    Mark Fell - Multistability  (full album) Raster-Noton https://www.youtube.com/watch?v=PHIGHpWKcw0
+https://www.youtube.com/watch?v=esBfmVQWlhI<br>
+Mark Fell - Multistability  (full album) Raster-Noton https://www.youtube.com/watch?v=PHIGHpWKcw0
 
 > Mark Fellは、DAWによるタイムラインベースの作曲は"Ordinary-Linear Time-Consciousness"に、Max/MSPによる視覚的なプログラミング環境は"Pattern-Cyclical Time-Consciousness"に近いと述べている
 >
 > [参考] https://note.com/n_peeq_t/n/n27a24987d4e6
 
 ### Warp Recordsから…
-    Autechre https://www.youtube.com/watch?v=BJ8XrQuYl6E
+Autechre https://www.youtube.com/watch?v=BJ8XrQuYl6E
+
+***
 
 ## 試しに触れてみよう
 ### Estuary: https://estuary.mcmaster.ca/<br>
@@ -89,6 +95,8 @@
 3. 試しに、枠に`sound "bd"`と書き込みます。
 4. "▶"ボタンを押下。音が鳴ります。
 5. 音を止めたいときは、枠の中をすべて消してから"▶"を押すか、`-- sound "bd"`といったように、コードの手前に`-- `と書き込みます。この記号が文頭にある文字列は、Tidal上で、コードではなくコメントとして認識されるようになります。
+
+***
 
 ### 基本の基本
     sound "bd"
@@ -163,6 +171,8 @@ Tidalでは、1秒あたりのサイクル cps(cycle per second) で時間を表
 
 ページ右上の"?"ボタンを押すと、他にも色々サンプルが出てきます。いろんな関数やエフェクターを覚えてみましょう。また、TidalCyclesのリファレンスページをチェックすると、細やかな紹介が見られます。http://tidalcycles.org/docs/reference/cycles ※MiniTidalにないものもあるので、少し注意。
 
+***
+
 ## Mexicode
 TidalCyclesがインストールされたパソコン1台を数人で交代交代にコーディングしながら演奏するスタイルをワークショップでよくやっていました。メキシコ流らしいので「Mexicode」と言うらしいです。
 
@@ -196,12 +206,14 @@ TidalCyclesがインストールされたパソコン1台を数人で交代交�
 
 です！
 
+***
+
 ## インストールパーティー
 TidalCyclesはインストールが少し大変。インストーラーをダウンロードして実行するだけのインストールだけをやっている人は、難しいと感じるかもしれません。（反対に、どういう構造であるからソフトウェアが動くのかということがきちんとわかるようになるというメリットもあります。）ライブコーディングのワークショップでは、インストールに戸惑いを覚える人や、あまりコンピュータの扱いに慣れていない人の支援をするために、インストールしながらジュースとかお菓子を食べつつおしゃべりなどをしており、これを「インストールパーティー」と呼んでいたのを覚えています。
 
 
 ### TidalCyclesの仕組み
-![適度な図](http://i.imgur.com/Jjwsc.jpg "サンプル")
+[適度な図](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/tidal_system_picture.png)
 
 
 ### ゆっくりインストールしてみましょう
