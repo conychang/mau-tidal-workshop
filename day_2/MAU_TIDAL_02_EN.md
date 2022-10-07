@@ -67,7 +67,7 @@ When you see `. Let's play some patterns!
 
 ### Recap
 
-Download [day2.tidal](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/day2.tidal) and play some patterns.
+Download [day2.tidal](https://github.com/conychang/mau-tidal-workshop/blob/main/day_2/day2.tidal) and play some patterns.
 You can also see really good tutorials videos here: https://tidalcycles.org/docs/patternlib/tutorials/course1.
 
 ***

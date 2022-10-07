@@ -7,4 +7,4 @@ I'm putting together materials for a workshop on [TidalCycles](https://tidalcycl
 
 1. DAY1｜[日本語](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/MAU_TIDAL_01.md)｜English
 
-2. DAY2｜[日本語](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/MAU_TIDAL_02_JP.md)｜[English](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/MAU_TIDAL_02_JP.md)
+2. DAY2｜[日本語](https://github.com/conychang/mau-tidal-workshop/blob/main/day_2/MAU_TIDAL_02_JP.md)｜[English](https://github.com/conychang/mau-tidal-workshop/blob/main/day_2/MAU_TIDAL_02_JP.md)
