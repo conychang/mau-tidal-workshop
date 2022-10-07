@@ -53,7 +53,7 @@ https://atom.io/<br>
 4. Audacity https://www.audacityteam.org/<br>
     You may want to have it for making your own samples. If you are a regular DAW user, you can use what you are used to.
 
-### 起動の方法
+### How to start up
 
 1. Start the SuperCollider app, type `SuperDirt.start;` and run it with `command + enter` or `ctrl + enter`. When the message `SuperDirt: listening to Tidal on port 57120` appears in the Post Window in the lower right corner, it's good status!
 
