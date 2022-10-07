@@ -68,7 +68,7 @@ t> Connected to SuperDirt.
 
 ### おさらい
 
-[day2.tidal](https://github.com/conychang/mau-tidal-workshop/blob/main/day_2/day2.tidal)をダウンロードして実行してみましょう。
+[day2.tidal](https://drive.google.com/file/d/1DSJBLXqyh2KY3R7PP4gmY0NcYWr9aq30/view?usp=sharing)をダウンロードして実行してみましょう。
 
 ***
 
