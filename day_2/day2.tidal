@@ -1,0 +1,102 @@
+-- this is comment
+-- アルファベット以外も書けるよ you can write in languages other than English :D
+
+d1 $ sound "bd"
+
+d2 $ s "cp*2"
+
+solo 1
+
+unsolo 1
+
+p "ptn1" $ s "bd"
+
+solo "ptn1"
+
+unsolo "ptn1"
+
+hush
+
+d1 silence
+
+d1 $ s "bd"
+
+d1 $ s "bd bd"
+
+d1 $ s "bd*2"
+
+d1 $ s "808"
+
+d1 $ s "808:0"
+
+d1 $ s "808" #n 0
+
+d1 $ s "808"
+  #n 0
+
+d1 $ s "808:1"
+
+d1 $ s "808 bd cp"
+
+d1 $ s "808*2 bd*3 cp*4"
+
+d1 $ s "808:1*2 bd*3 cp:1*4"
+
+hush
+
+d1 $ s "bd*6"
+
+d1 $ fast 6 $ s "bd*6"
+
+d1 $ slow 6 $ s "bd*6"
+
+d1 $ jux (fast 6) $ s "bd*6"
+
+d1 $ every 4 (fast 6) $ s "bd*6"
+
+d1 $ palindrome $ s "arpy:0 arpy:1 arpy:2 arpy:3"
+
+d1 $ stack [s "bd*4", s "arpy*3", s "hh*5"]
+
+d1 $ stack [
+  s "bd"
+  , s "arpy*3"
+  , s "hh*5"
+]
+
+d1 $ stack [s "bd*4", s "arpy*3", s "hh*5"] #gain 0.5
+
+d1 $ stack [s "bd*4", s "arpy*3", s "hh*5"] #gain (range 0 1 $ slow 4 saw)
+
+d1 $ stack [s "bd*4", s "arpy*3", s "hh*5"] #note "1 3 5"
+
+d1 $ stack [s "bd*4", s "arpy*3", s "hh*5"] #n (irand 8)
+
+d1 $ stack [s "bd*4", s "arpy*3", s "hh*5"] #speed "1 3 5"
+
+d1 $ s "cp*2" #end 0.2
+
+d1 $ stack [s "bd*4", s "arpy*3", s "hh*5"] #note "[0, 4, 7]"
+
+d1 $ s "arpy*3?"
+
+d1 $ s "~ cp"
+
+d1 $ s "~ [~ cp]"
+
+setcps 0.5
+
+hush
+
+do
+  setcps 0.75
+  d1 $ s "arpy*4" #n (run 6)
+  d2 $ palindrome
+     $ every 5 (fast 2)
+     $ s "{arpy*3}%2" #n (irand 30)
+      #delay 0.5 #delaytime 0.75
+      #gain (range 0.75 1 $ slow 5 sine)
+      #speed "1 0.75 0.5"
+      #pan (range 0 1 $ sine)
+
+unsolo 1
