@@ -5,6 +5,6 @@ I'm putting together materials for a workshop on [TidalCycles](https://tidalcycl
 
 📧 岡　千穂 Chiho Oka chihooka@gmail.com
 
-1. DAY1｜[日本語](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/MAU_TIDAL_01.md)｜English
+1. DAY1｜[日本語](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/MAU_TIDAL_01.md)｜[English](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/MAU_TIDAL_01_EN.md)
 
 2. DAY2｜[日本語](https://github.com/conychang/mau-tidal-workshop/blob/main/day_2/MAU_TIDAL_02_JP.md)｜[English](https://github.com/conychang/mau-tidal-workshop/blob/main/day_2/MAU_TIDAL_02_EN.md)
