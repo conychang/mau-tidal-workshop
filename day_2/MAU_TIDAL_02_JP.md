@@ -18,7 +18,7 @@ https://atom.io/<br>
 
   上記URLがつながらないときは以下
   - **[Mac]** https://github.com/atom/atom/releases/download/v1.60.0/atom-mac.zip
-  - **[Windows]** https://github.com/atom/atom/releases/download/v1.61.0-beta0/atom-windows.zip
+  - **[Windows]** https://github.com/atom/atom/releases/download/v1.60.0/atom-windows.zip
 
 
 2. Atomの中のTidalCycles用プラグインをインストールします。
@@ -32,7 +32,7 @@ https://atom.io/<br>
 
     1. "Terminal"アプリを起動します。
     2. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
-            curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
+                curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
     3. パスワードを要求されます。入力した文字は画面に反映されませんが、最後までパスワードを入力して、`enter`を押します。たくさん情報がスクロールで流れてきます。最後まで実行させてください。
 
 
@@ -41,9 +41,9 @@ https://atom.io/<br>
         **Windows 7** - スタートボタンをクリックし、`powershell`と入力し、マウスの右ボタンでクリックし、[管理者として実行]を選択します。
 
       2. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
-                Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+                  Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
       3. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
-              choco install tidalcycles
+                  choco install tidalcycles
 
   - Automatic installationでインストールされるものは以下です。
       - SuperCollider (と SuperDirt)
