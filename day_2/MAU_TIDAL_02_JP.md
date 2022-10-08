@@ -17,7 +17,7 @@ https://docs.google.com/document/d/1MxpUh1fgzPSUEtk-jQ6UUoqb_52ygsyV8Xuo7xHMi8w/
 https://atom.io/<br>
 
   上記URLがつながらないときは以下
-  - **[Mac]** https://github.com/atom/atom/releases/download/v1.61.0-beta0/atom-mac.zip
+  - **[Mac]** https://github.com/atom/atom/releases/download/v1.60.0/atom-mac.zip
   - **[Windows]** https://github.com/atom/atom/releases/download/v1.61.0-beta0/atom-windows.zip
 
 
