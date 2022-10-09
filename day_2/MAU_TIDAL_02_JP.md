@@ -3,15 +3,19 @@
 ## インストールパーティー
 TidalCyclesはインストールが少し大変。インストーラーをダウンロードして実行するだけでないので、難しいと感じるかもしれません。（どういう構造であるからソフトウェアが動くのかということがきちんとわかるようになるというメリットもあるのですが…）ライブコーディングのワークショップでは、インストールに戸惑いを覚える人や、あまりコンピュータの扱いに慣れていない人の支援をするために、インストールしながらジュースとかお菓子を食べつつおしゃべりなどをしており、これを「インストールパーティー」と呼んでいたのを覚えています。
 
+***
 
 ### TidalCyclesの仕組み
 [適度な図](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/tidal_system_picture.png)
 
+***
 
 ### ゆっくりインストールしてみましょう
 
 0. **[Macの人だけ]** Xcode Command Line Toolsのインストール方法
 https://docs.google.com/document/d/1MxpUh1fgzPSUEtk-jQ6UUoqb_52ygsyV8Xuo7xHMi8w/edit?usp=sharing
+
+***
 
 1. テキストエディタ"Atom"をインストールします。
 https://atom.io/<br>
@@ -20,45 +24,63 @@ https://atom.io/<br>
   - **[Mac]** https://github.com/atom/atom/releases/download/v1.60.0/atom-mac.zip
   - **[Windows]** https://github.com/atom/atom/releases/download/v1.60.0/atom-windows.zip
 
+***
 
 2. Atomの中のTidalCycles用プラグインをインストールします。
   1. "Atom"メニュー → "Preferences" → "Install" へと進みます。
+
   2. "Install Packages"ページが表示されます。検索欄に「TidalCycles」と打ち込んで、検索。"Install"ボタンを押したら、完了です。
 
+  - https://atom.io/packages/tidalcycles このページの"Install"ボタンをクリックし、Atomに飛ぶという方法でも可能です。
 
-3. TidalCyclesをインストールします。公式ドキュメントの"Automatic installation"を参考に進めましょう。もし中級者以上の人がいれば、"Manual installation"の項目を確認してみてもいいかもしれません。
+***
+
+3. TidalCyclesをインストールします。公式ドキュメントの"Automatic installation"を参考に進めてもよいです。もし中級者以上の人がいれば、"Manual installation"の項目を確認してみてもいいかもしれません。
+
+***
 
 - **[Mac]** https://tidalcycles.org/docs/getting-started/macos_install
 
-    1. "Terminal"アプリを起動します。
-    2. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
-```
-curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
-```
-    3. パスワードを要求されます。入力した文字は画面に反映されませんが、最後までパスワードを入力して、`enter`を押します。たくさん情報がスクロールで流れてきます。最後まで実行させてください。
+1. "Terminal"アプリを起動します。
 
+2. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
+
+  ```
+  curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
+  ```
+3. パスワードを要求されます。入力した文字は画面に反映されませんが、最後までパスワードを入力して、`enter`を押します。たくさん情報がスクロールで流れてきます。最後まで実行させてください。
+
+***
 
   - **[Windows]** https://tidalcycles.org/docs/getting-started/windows_install
-      1. **Windows 10** - windowsキーを押しながら`x`を押して、ポップアップしたメニューから「Windows PowerShell（管理者）」を選択します。
-        **Windows 7** - スタートボタンをクリックし、`powershell`と入力し、マウスの右ボタンでクリックし、[管理者として実行]を選択します。
 
-      2. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
+1. **Windows 10** - windowsキーを押しながら`x`を押して、ポップアップしたメニューから「Windows PowerShell（管理者）」を選択します。
+
+  **Windows 7** - スタートボタンをクリックし、`powershell`と入力し、マウスの右ボタンでクリックし、[管理者として実行]を選択します。
+
+2. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
-      3. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
+3. 以下のスクリプトをコピー＆ペーストして、`enter`を押します。
 ```
 choco install tidalcycles
 ```
 
-  - Automatic installationでインストールされるものは以下です。
-      - SuperCollider (と SuperDirt)
-      - Haskell(TidalCyclesはHaskellという言語で書かれています。)
+***
 
-      - Tidal Pattern engine (TidalCyclesそのもの)
+- ちなみに、Automatic installationでインストールされるものは以下です。
+    - SuperCollider (と SuperDirt)
+    - Haskell(TidalCyclesはHaskellという言語で書かれています。)
+
+    - Tidal Pattern engine (TidalCyclesそのもの)
+
+***
 
 4. Audacity https://www.audacityteam.org/<br>
     自分のサンプル作りのためにあるといいかも。普段からDAWなどを使っている人は、なれているものを使ってOK。
+
+***
 
 ### 起動の方法
 
@@ -69,6 +91,30 @@ choco install tidalcycles
 3. メニューバーの"Packages" → "Boot TidalCycles"を選択。エディタ内に立ち上がったウィンドウに`Listening for external controls on 127.0.0.1:6010
 t> Connected to SuperDirt.
 `と表示されたら準備OKです。何かパターンを鳴らしてみましょう！
+
+***
+
+### トラブルシューティング
+
+Windowsを使っている人で、TidalCyclesを起動しようとするとAtomでエラーが出る人は、以下を行ってみてください。
+
+1. "PowerShell"を起動する
+
+  **Windows 10** - windowsキーを押しながら`x`を押して、ポップアップしたメニューから「Windows PowerShell」を選択します。
+
+  **Windows 7** - スタートボタンをクリックし、`powershell`と入力・検索し、選択します。
+
+2. `rm .atom`と入力しEnterで実行します。.atom以下のすべてのファイルが削除されるメッセージが出た場合は、Enterボタンをもう一度押下してください。
+
+3. Atomを再度インストールしてください。https://github.com/atom/atom/releases/download/v1.60.0/atom-windows.zip
+
+4. 再度TidalCycles用のプラグインをインストールしてください。
+
+  1. "Atom"メニュー → "Preferences" → "Install" へと進みます。
+
+  2. "Install Packages"ページが表示されます。検索欄に「TidalCycles」と打ち込んで、検索。"Install"ボタンを押したら、完了です。
+
+  - https://atom.io/packages/tidalcycles このページの"Install"ボタンをクリックし、Atomに飛ぶという方法でも可能です。
 
 ***
 
@@ -92,8 +138,9 @@ t> Connected to SuperDirt.
 
 6. Tidalで新しく追加した自分のサンプルを使ってみましょう！
 
+***
 
-#### Audacityでサンプルを切り出す
+### Audacityでサンプルを切り出す
 
 自分の慣れているDAWを使いたい人はそれでいいです！
 

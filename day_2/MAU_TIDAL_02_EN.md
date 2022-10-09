@@ -24,6 +24,7 @@ https://atom.io/<br>
 2. Install the plugin for TidalCycles in Atom.
   1. "Preferences" on the menu bar → "Install".
   2. "The "Install Packages" page will appear. Type "TidalCycles" in the search field to find it. Press the "Install" button.
+  - You can also go to https://atom.io/packages/tidalcycles and click on the "Install" button on this page, which will take you to Atom.
 
 
 3. Install TidalCycles. Refer to the "Automatic installation" section of the official documentation. If you are an advanced user, you may want to check the "Manual installation" section.
@@ -59,6 +60,30 @@ https://atom.io/<br>
 4. Audacity https://www.audacityteam.org/<br>
     You may want to have it for making your own samples. If you are a regular DAW user, you can use what you are used to.
 
+***
+
+### Troubleshooting
+
+If you are using Windows and are getting an Atom error when trying to start TidalCycles, try the following instruction.
+
+1. Launch "PowerShell".
+
+  **Windows 10** - Press `x` while holding down the windows key and select "Windows PowerShell" from the menu that pops up.
+
+  **Windows 7** - Click the start button, type/search for `powershell` and select it. 2.
+
+2. Type `rm .atom` and press Enter to run it. If you get a message that all files under .atom will be deleted, press Enter again.
+
+3. Reinstall Atom. https://github.com/atom/atom/releases/download/v1.60.0/atom-windows.zip
+
+4. Reinstall the plugin for TidalCycles on Atom.
+  1. "Preferences" on the menu bar → "Install".
+  2. "The "Install Packages" page will appear. Type "TidalCycles" in the search field to find it. Press the "Install" button.
+  - You can also go to https://atom.io/packages/tidalcycles and click on the "Install" button on this page, which will take you to Atom.
+
+
+***
+
 ### How to start up
 
 1. Start the SuperCollider app, type `SuperDirt.start;` and run it with `command + enter` or `ctrl + enter`. When the message `SuperDirt: listening to Tidal on port 57120` appears in the Post Window in the lower right corner, it's good status!
@@ -92,8 +117,9 @@ You can also see really good tutorials videos here: https://tidalcycles.org/docs
 
 6. Play your own newly added samples on Tidal!
 
+***
 
-#### Cutting out samples in Audacity
+### Cutting out samples in Audacity
 
 If you prefer to use the DAW you're used to, that's fine!
 
