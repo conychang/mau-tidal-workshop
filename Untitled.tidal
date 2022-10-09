@@ -1,0 +1,5 @@
+d1 $ s "arpy*5" #n (irand 10)
+      #delay 0.25 #delaytime 0.75
+      #gain (range 0.5 1 $ slow 4 sine)
+
+hush

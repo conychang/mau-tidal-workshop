@@ -32,7 +32,9 @@ https://atom.io/<br>
 
     1. Open the "Terminal" App.
     2. Copy and paste the following script and press `enter`.
-            curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
+    ```
+    curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
+    ```
     3. It will probably ask for your password. As you type, characters won't be echoed to the screen. A lot of confusing info will scroll past. Just let it run until the end. Tidal should thereafter be installed on your computer.
 
 
@@ -41,9 +43,13 @@ https://atom.io/<br>
         **Windows 7** - Click the start button, type `powershell`, then click with the right mouse button and choose Run as Administrator.
 
       2. Copy and paste the following script and press `enter`.
-              Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  ```
+  Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+  ```
       3. Copy and paste the following script and press `enter`.
-              choco install tidalcycles
+  ```
+  choco install tidalcycles
+  ```
 
   - The following software is installed by Automatic installation.
     - SuperCollider (and SuperDirt)
