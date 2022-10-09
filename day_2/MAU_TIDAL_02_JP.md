@@ -110,11 +110,11 @@ Windowsを使っている人で、TidalCyclesを起動しようとするとAtom�
 
 4. 再度TidalCycles用のプラグインをインストールしてください。
 
-  1. "Atom"メニュー → "Preferences" → "Install" へと進みます。
+      1. "Atom"メニュー → "Preferences" → "Install" へと進みます。
 
-  2. "Install Packages"ページが表示されます。検索欄に「TidalCycles」と打ち込んで、検索。"Install"ボタンを押したら、完了です。
+      2. "Install Packages"ページが表示されます。検索欄に「TidalCycles」と打ち込んで、検索。"Install"ボタンを押したら、完了です。
 
-  - https://atom.io/packages/tidalcycles このページの"Install"ボタンをクリックし、Atomに飛ぶという方法でも可能です。
+      - https://atom.io/packages/tidalcycles このページの"Install"ボタンをクリックし、Atomに飛ぶという方法でも可能です。
 
 ***
 
