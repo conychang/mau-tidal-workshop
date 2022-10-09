@@ -3,15 +3,19 @@
 ## What's "installation party"?
 TidalCycles is a bit difficult to install. You may find it challenging because it is not just a matter of downloading and running the installer. (Although it has the advantage that you will be able to understand how the software works because of its structure...) In the live coding workshop, we have a chat while eating juice or snacks during the installation to help those who feel confused about the installation or are not very familiar with computers.
 
+***
 
 ### How does TidalCycles work?
 [Figure](https://github.com/conychang/mau-tidal-workshop/blob/main/day_1/tidal_system_picture.png)
 
+***
 
 ### Let's install it slowly.
 
 0. **[Only for Mac users]** Installation of Xcode Command Line Tools
 https://docs.google.com/document/d/1MxpUh1fgzPSUEtk-jQ6UUoqb_52ygsyV8Xuo7xHMi8w/edit?usp=sharing
+
+***
 
 1. Install the text editor "Atom".
 https://atom.io/<br>
@@ -19,6 +23,7 @@ https://atom.io/<br>
   If the above URL does not connect, download from the following.
   - **[Mac]** https://github.com/atom/atom/releases/download/v1.61.0-beta0/atom-mac.zip
   - **[Windows]** https://github.com/atom/atom/releases/download/v1.61.0-beta0/atom-windows.zip
+
 
 
 2. Install the plugin for TidalCycles in Atom.
@@ -29,33 +34,40 @@ https://atom.io/<br>
 
 3. Install TidalCycles. Refer to the "Automatic installation" section of the official documentation. If you are an advanced user, you may want to check the "Manual installation" section.
 
-- **[Mac]** https://tidalcycles.org/docs/getting-started/macos_install
+***
 
-    1. Open the "Terminal" App.
-    2. Copy and paste the following script and press `enter`.
-    ```
-    curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
-    ```
-    3. It will probably ask for your password. As you type, characters won't be echoed to the screen. A lot of confusing info will scroll past. Just let it run until the end. Tidal should thereafter be installed on your computer.
+**[Mac]** https://tidalcycles.org/docs/getting-started/macos_install
 
+1. Open the "Terminal" App.
 
-  - **[Windows]** https://tidalcycles.org/docs/getting-started/windows_install
-      1. **Windows 10** - Hold down the windows key and press 'x', then choose Windows PowerShell (admin) in the menu that pops up.
-        **Windows 7** - Click the start button, type `powershell`, then click with the right mouse button and choose Run as Administrator.
+2. Copy and paste the following script and press `enter`.
+```
+curl https://raw.githubusercontent.com/tidalcycles/tidal-bootstrap/master/tidal-bootstrap.command -sSf | sh
+```
+3. It will probably ask for your password. As you type, characters won't be echoed to the screen. A lot of confusing info will scroll past. Just let it run until the end. Tidal should thereafter be installed on your computer.
 
-      2. Copy and paste the following script and press `enter`.
+***
+
+**[Windows]** https://tidalcycles.org/docs/getting-started/windows_install
+
+1. **Windows 10** - Hold down the windows key and press 'x', then choose Windows PowerShell (admin) in the menu that pops up.
+  **Windows 7** - Click the start button, type `powershell`, then click with the right mouse button and choose Run as Administrator.
+
+2. Copy and paste the following script and press `enter`.
   ```
   Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
   ```
-      3. Copy and paste the following script and press `enter`.
+3. Copy and paste the following script and press `enter`.
   ```
   choco install tidalcycles
   ```
 
-  - The following software is installed by Automatic installation.
+- The following software is installed by Automatic installation.
     - SuperCollider (and SuperDirt)
     - Haskell Language (Ghcup)
     - The Tidal Pattern engine (Tidal Cycles itself)
+
+***
 
 4. Audacity https://www.audacityteam.org/<br>
     You may want to have it for making your own samples. If you are a regular DAW user, you can use what you are used to.
