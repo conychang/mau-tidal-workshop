@@ -22,9 +22,9 @@ https://atom.io/<br>
 
 
 2. Install the plugin for TidalCycles in Atom.
-  1. "Preferences" on the menu bar → "Install".
-  2. "The "Install Packages" page will appear. Type "TidalCycles" in the search field to find it. Press the "Install" button.
-  - You can also go to https://atom.io/packages/tidalcycles and click on the "Install" button on this page, which will take you to Atom.
+    1. "Preferences" on the menu bar → "Install".
+    2. "The "Install Packages" page will appear. Type "TidalCycles" in the search field to find it. Press the "Install" button.
+    - You can also go to https://atom.io/packages/tidalcycles and click on the "Install" button on this page, which will take you to Atom.
 
 
 3. Install TidalCycles. Refer to the "Automatic installation" section of the official documentation. If you are an advanced user, you may want to check the "Manual installation" section.
@@ -77,9 +77,9 @@ If you are using Windows and are getting an Atom error when trying to start Tida
 3. Reinstall Atom. https://github.com/atom/atom/releases/download/v1.60.0/atom-windows.zip
 
 4. Reinstall the plugin for TidalCycles on Atom.
-  1. "Preferences" on the menu bar → "Install".
-  2. "The "Install Packages" page will appear. Type "TidalCycles" in the search field to find it. Press the "Install" button.
-  - You can also go to https://atom.io/packages/tidalcycles and click on the "Install" button on this page, which will take you to Atom.
+    1. "Preferences" on the menu bar → "Install".
+    2. "The "Install Packages" page will appear. Type "TidalCycles" in the search field to find it. Press the "Install" button.
+    - You can also go to https://atom.io/packages/tidalcycles and click on the "Install" button on this page, which will take you to Atom.
 
 
 ***
