@@ -103,7 +103,7 @@ A web-based platform for collaboration, but a subset (easy version) of TidalCycl
 
 ### The Basics
     sound "bd"
-In Tidal, time is expressed in cycles per second cps (cycles per second). The basic idea is that the cycle is repeated over and over again.... The `sound "bd"` that I wrote for testing means that the sample "bd" is repeated once per cycle per second.
+In Tidal, time is expressed in cps (cycles per second). The basic idea is that the cycle is repeated over and over again.... The `sound "bd"` that I wrote for testing means that the sample "bd" is repeated once per cycle per n second.
 
 and can also be shorted as:
 
@@ -182,7 +182,7 @@ Click on the "?" button in the upper right corner of the page, you will see many
 A style of performance in which several people take turns coding on a single computer with TidalCycles installed. I saw it done often at workshops. I heard it is called "Mexicode" because it is the Mexican style.
 
 ### Note: The difference between Tidalcycles and MiniTidal
-Before describing the pattern, indicate at the beginning of the sentence which "connection" from d1 to d9 is to be used. It may be easier to understand if you think of it as basically being prepared from Layer 1 to Layer 9, or something like that.
+Before describing the pattern, indicate at the beginning of the sentence which "connection" from d1 to d16 is to be used. It may be easier to understand if you think of it as basically being prepared from Layer 1 to Layer 9, or something like that.
 
     d1 $ s "bd"
 
