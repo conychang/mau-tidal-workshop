@@ -54,4 +54,4 @@ s.meter;
 ```
 s.makeGui;
 ```
-<img src="makeGui.png" width="70%">
+<img src="makegui.png" width="70%">
