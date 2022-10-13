@@ -1,0 +1,177 @@
+-- day4!
+
+-- 減算合成 Subtractive synthesis
+-- 他にもあります other synths: https://tidalcycles.org/docs/patternlib/tutorials/synthesizers#substractive-synthesis
+
+d1
+  $ n (fast 3 $ fmap (*7) $ "[1 .. 5]")
+  # s "supersquare"
+  # octave "{2 3, 4 5, 6}"
+  # decay "[1 0.72]/4"
+  # voice "[0.5 0.95]/8"
+  # accelerate (range 0 1 $ slow 4 perlin)
+  # semitone (choose [12, 14, 16])
+  # resonance (range 0.2 1 $ slow 14 sine)
+  # lfo (range 0.1 1 $ slow 16 sine)
+  # rate (range 1 10 $ slow 14 sine)
+  # sustain (range 1.25 0.95 $ slow 5 sine)
+  |* pitch1 (range 0.1 1 $ slow 16 sine)
+
+-- about fmap
+fmap (*2) [1 .. 5] -- 実行したらどんなリストになるでしょうか？
+
+-- シンセサイザーの仕組みを学ぶ: https://learningsynths.ableton.com/ja
+
+
+-- ドラムシンセ Drum synthesis
+-- https://tidalcycles.org/docs/patternlib/tutorials/synthesizers#drum-synthesis
+
+p "kick"
+  $ n (fast "1 3" $ "5*3?")
+  # octave 4
+  # s "soskick"
+  # midinote (fast 3 $ fmap (*3) $ "[1 .. 5]")
+  # pitch1 (range 70 50 $ perlin)
+  # voice 1
+  # pitch2 30
+  # speed 2.7
+  # sustain 0.9
+
+p "hat"
+  $ n "{~ 8}%<5 7>"
+  # s "[superhat]"
+  # accelerate 2
+  # sustain (range 0.55 0.85 $ perlin) #hcutoff 5000
+  # nudge "1.005 1.025"
+  # gain (range 0.5 1.25 $ perlin) #pan "[0, 1]"
+
+
+-- 加算合成 Additive synthesis
+
+d1 $ n (slow "3 1 0.5" $ fmap (*7) $ run 10)
+  # s "supergong"
+  # octave "{3, 4 5}"
+  # decay "[1 0.2]/4"
+  # voice "[0.5 0.35]/8"
+  # accelerate (range 0 1 $ slow 4 perlin)
+  # sustain (range 1 10 $ slow 5 sine)
+  # pan (range 0 1 $ perlin)
+  # gain 0.75
+
+d2 $ n (slow "0.5 1 3" $ fmap (*7) $ run 10)
+  # s "supergong"
+  # octave "{5, 4 3}"
+  # decay "[1 0.2]/4"
+  # voice "[0.5 0.85]/8"
+  # accelerate (range 0 1 $ slow 4 perlin)
+  # sustain (range 1 10 $ slow 5 sine)
+  # pan (range 1 0 $ perlin)
+  # gain 0.75
+
+
+-- 物理モデリング Physical modelling
+-- 他にもあります other synths: https://tidalcycles.org/docs/patternlib/tutorials/synthesizers#physical-modelling
+
+d1
+  $ n (fast "{1, 3 5}" $ fmap (*7) $ "[1 .. 5]")
+  # s "superpiano"
+  # octave "{2 3, 4 5, 6}"
+  # velocity (radnge 0.5 1 $ slow 16 sine)
+  # sustain 1.5
+  # accelerate (range 0 1 $ perlin)
+  # detune (range 0.2 2 $ perlin)
+
+
+-- FMシンセシス FM synthesis
+
+do
+  let
+    lfofreq = pF "lfofreq"
+    lfodepth = pF "lfodepth"
+  d1
+    $ n (fast 3 $ fmap (*7) $ "[1 .. 5]")
+    # s "superfm"
+    # octave "{3, 4 5, 6}"
+    # voice 3 -- preset number: 0 is user-defined; 1-5 are randomly generated presets
+    # lfofreq (range 0.1 10 $ slow 6 sine)
+    # lfodepth (range 0.1 1 $ slow 4 sine)
+    # amp 0.35
+    # sustain (range 0.75 0.25 $ slow 5 sine)
+
+
+-- その他 Others
+-- https://tidalcycles.org/docs/patternlib/tutorials/synthesizers#other-synths-and-goodies
+
+p "in"
+  $ n "t*5"
+  # s "in" #gain 1.25
+
+p "in"
+  $ n "t*5"
+  # s "inr" #accelerate 2
+
+p "psin"
+  $ n "{~ 8}%<5 7>" |+ n "[1 .. 5]"
+  # s "psin"
+  # accelerate 1
+  # sustain (range 0.75 0.15 $ perlin)
+  # nudge "1.005 1.025" #gain 0.85
+
+p "cyclo"
+  $ n "{~ 8}%<5 7>" |+ n "[1 .. 5]" |+ n "[0, 2]"
+  # s "supersiren"
+  # sustain (range 0.75 0.15 $ perlin)
+  # nudge "1.105 1.055" #vowel "u a o"
+
+-- https://tidalcycles.org/docs/patternlib/tutorials/synthesizers
+-- ↑　いろいろなシンセを鳴らしてみよう
+
+
+-- おまけ（音楽的に考えるなら）: スケール、コードとアルペジオ
+-- Extra (if you think musically): scales, chords and arpeggios
+-- http://tidalcycles.org/docs/reference/harmony_melody/
+
+-- scale
+d1
+  $ struct (iter 4 "t(5,8)")
+  $ n (scale "majPent" "0 .. 7")
+  # s "superpiano" #sustain 0.95
+
+lookup "majPent" scaleTable
+
+-- minPent majPent ritusen egyptian kumai hirajoshi iwato chinese indian pelog
+-- prometheus scriabin gong shang jiao zhi yu whole augmented augmented2 hexMajor7
+-- hexDorian hexPhrygian hexSus hexMajor6 hexAeolian major ionian dorian phrygian
+-- lydian mixolydian aeolian minor locrian harmonicMinor harmonicMajor melodicMinor
+-- melodicMinorDesc melodicMajor bartok hindu todi purvi marva bhairav ahirbhairav
+-- superLocrian romanianMinor hungarianMinor neapolitanMinor enigmatic spanish
+-- leadingWhole lydianMinor neapolitanMajor locrianMajor diminished diminished2
+-- chromatic
+
+d1 $ n "<cs a f e>"
+  # sound "supermandolin"
+
+-- cs: ド#, cf: ドb
+
+d1 $ n (off 0.125 (|+ 7) "<c a f e>")
+  # sound "supermandolin"
+
+d1 $ n "c'maj"
+  # s "supermandolin"
+  # legato 2
+
+-- major maj aug plus sharp5 six 6 sixNine six9 sixby9 6by9 major7 maj7 major9 maj9 add9 major11 maj11 add11 major13 maj13
+-- add13 dom7 dom9 dom11 dom13 sevenFlat5 7f5 sevenSharp5 7s5 sevenFlat9 7f9 nine eleven 11 thirteen 13 minor min diminish
+-- ed dim minorSharp5 msharp5 mS5 minor6 min6 m6 minorSixNine minor69 min69 minSixNine m69 mSixNine m6by9 minor7flat5
+-- min7flat5 m7flat5 m7f5 minor7 min7 m7 minor7sharp5 min7sharp5 m7sharp5 m7s5 minor7flat9 min7flat9 m7flat9 m7f9 minor7sharp9
+-- min7sharp9 m7sharp9 m7s9 diminished7 dim7 minor9 min9 m9 minor11 min11 m11 minor13 min13 m13 one 1 five 5 sus2 sus4 seven
+-- Sus2 7sus2 sevenSus4 7sus4 nineSus4 ninesus4 9sus4 sevenFlat10 7f10 nineSharp5 9s5 m9sharp5 m9s5 sevenSharp5flat9 7s5f9
+-- m7sharp5flat9 elevenSharp 11s m11sharp m11s
+
+d1 $ arp "thumbup" $ n "c'maj"
+  # sound "supermandolin"
+  # legato 2
+
+-- up down updown downup up&down down&up converge
+-- diverge disconverge pinkyup pinkyupdown
+-- thumbup thumbupdown
