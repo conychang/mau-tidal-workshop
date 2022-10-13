@@ -11,4 +11,4 @@ I'm putting together materials for a workshop on [TidalCycles](https://tidalcycl
 
 3. DAY3｜[日本語](https://github.com/conychang/mau-tidal-workshop/blob/main/day_3/MAU_TIDAL_03_JP.md)｜[English](https://github.com/conychang/mau-tidal-workshop/blob/main/day_3/MAU_TIDAL_03_EN.md)
 
-4. DAY4｜[日本語](./day4/MAU_TIDAL_04_JP.md)｜[English](./day4/MAU_TIDAL_04_EN.md)
+4. DAY4｜[日本語](./day_4/MAU_TIDAL_04_JP.md)｜[English](./day_4/MAU_TIDAL_04_EN.md)
