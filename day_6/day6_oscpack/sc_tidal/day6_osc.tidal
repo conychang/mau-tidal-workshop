@@ -1,0 +1,15 @@
+setcps 0.57
+
+d1 $ s "ifdrums*5?" #vowel "a"
+
+d2 $ every 3 (fast 3) $ s "{~ ~ sine}%2" #speed "[1.75, 1.5]" #n (irand 10) #orbit 1
+
+d3 $ sometimesBy 0.2 (slow 2) $ s "808:1*<8 9 10>"
+
+d4 $ s "~ drum ~" #n (irand 10)
+
+d5 $ s "~ ~ [drum ~]" #n (irand 10)
+
+d6 $ slow 3 $ s "~ drum ~" #n (irand 10)
+
+hush
