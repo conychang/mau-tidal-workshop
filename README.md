@@ -15,6 +15,6 @@ I'm putting together materials for a workshop on [TidalCycles](https://tidalcycl
 
 5. DAY5｜[mini works](./day_5/MAU_TIDAL_05_JP.md)
 
-6. DAY6｜[日本語](./day_6/MAU_TIDAL_06_JP.md)｜[English](./day_6/MAU_TIDAL_06_EN.md)
+6. DAY6 ｜[日本語](./day_6/MAU_TIDAL_06_JP.md)｜[English](./day_6/MAU_TIDAL_06_EN.md)
 
   ◉ [TouchDesignerとTidalCycles(SuperCollider)のOSC連携チュートリアル](./tidal_td_OSC/tidal_td_OSC.md)<br>

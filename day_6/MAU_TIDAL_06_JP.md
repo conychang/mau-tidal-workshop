@@ -201,7 +201,7 @@ o = OSCFunc({ arg msg, time, addr, recvPort; [msg, time, addr, recvPort].postln;
 
   <img src="max_808.png" width= "50%">
 
-### ★ SuperCollider(SuperDirt)側のポート6010を使う
+### ★ TidalCycles側のポート6010を使う
 
 [22/10/29訂正]TidalCyclesが動いているコンピュータでlocalhostの`6010`(TidalCyclces側のポート)に送るとプレイバックのコントロールが可能なメッセージがあります。
 
@@ -218,6 +218,10 @@ o = OSCFunc({ arg msg, time, addr, recvPort; [msg, time, addr, recvPort].postln;
 
 相手からメッセージを受け取ったら、それをlocalhostの`6010`に転送すればTidalCyclesのプレイバックコントロールを他の人に任せることも可能というわけです。
 
+- Max: /playback から始まるメッセージでTidalのプレイバックコントロールができるコマンドを送る
+
+	<img src="max_playbackctrl_2.png" width= "80%">
+
 - SuperCollider: /playback から始まるTidalのプレイバックコントロールの命令を受け取ったら、自分のPCのTidalが使っているポートにそれを横流しする。
 
 	```
@@ -226,11 +230,13 @@ o = OSCFunc({ arg msg, time, addr, recvPort; [msg, time, addr, recvPort].postln;
 
 	o = OSCFunc({
 		arg msg;
-		addr.sendMsg(msg.removeAt(0)); // メッセージの頭にある"/playback"を取り除く
+		if (msg.size == 2, { // OSCメッセージのサイズが2のときは
+			addr.sendMsg(msg[1]); // メッセージの1番目だけ送る
+		}, {
+			if (msg.size == 3, { // OSCメッセージのサイズが3のときは
+			addr.sendMsg(msg[1], msg[2]).postln; // メッセージの1, 2番目を送る
+			})
+		} )
 	},'/playback');
 	)
 	```
-
-- Max: /playback から始まるメッセージでTidalのプレイバックコントロールができるコマンドを送る
-
-	<img src="max_playbackctrl_2.png" width= "80%">

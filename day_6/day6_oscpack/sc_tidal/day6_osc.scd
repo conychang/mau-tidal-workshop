@@ -68,7 +68,7 @@ o.free;
 // OSCメッセージの受信
 // Receive OSC Message
 
-thisProcess.openUDPPort(7400); // open port 7400 - 7400番のポートを開ける
+thisProcess.openUDPPort(7500); // open port 7400 - 7400番のポートを開ける
 thisProcess.openPorts; // list all open ports - 開いているポートのリストを表示
 
 // 受信できているか確認
@@ -127,10 +127,25 @@ o = OSCFunc(
 )
 
 (
-var addr = NetAddr.new("127.0.0.1", 6010);
+var a;
+a = List[1, 2, 3, 4];
+a.removeAt(3);
+a;
+)
+
+(
+var addr = NetAddr.new("127.0.0.1", 6010); // 送り先は自分のPCのTidalが使っているポート
 
 o = OSCFunc({
 	arg msg;
-	addr.sendBundle(msg);
+	if (msg.size == 2, { // OSCメッセージのサイズが2のときは
+		addr.sendMsg(msg[1]); // メッセージの1番目だけ送る
+	}, {
+		if (msg.size == 3, { // OSCメッセージのサイズが3のときは
+		addr.sendMsg(msg[1], msg[2]).postln; // メッセージの1, 2番目を送る
+		})
+	} )
 },'/playback');
 )
+
+o.free;

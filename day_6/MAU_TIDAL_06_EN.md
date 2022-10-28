@@ -201,9 +201,10 @@ o = OSCFunc({ arg msg, time, addr, recvPort; [msg, time, addr, recvPort].postln;
 
   <img src="max_808.png" width= "50%">
 
-### ★ Use port 6010 on the SuperCollider (SuperDirt) side
+### ★ Use port 6010 on the TidalCycles side
 
-You can control the playback by sending it to port `6010` on the SuperCollider (SuperDirt) side. No special preparation is required on the SuperCollider side.
+[Corrected 10/29/22] There is a message that can be sent to `6010` (TidalCyclces side port) on localhost on a computer running TidalCycles to control playback.
+
 - `/mute 1`, `/unmute 1`: mute and unmute `d1` in TidalCycles.
 - `/solo 1`, `/unsolo 1`: allows you to solo and un-solo `d1` in TidalCycles.
 - `/solo hat`, `/unsolo hat`: allows you to solo or unsolo `p "hat"`. So does `mute`.
@@ -214,3 +215,28 @@ You can control the playback by sending it to port `6010` on the SuperCollider (
 - Max<br>
 
   <img src="max_playbackctrl.png" width= "50%">
+
+When you receive a message from the other party, you can forward it to `6010` on localhost and let someone else take playback control of TidalCycles.
+
+- Max: Send a command that allows Tidal playback control with a message starting with /playback
+
+	<img src="max_playbackctrl_2.png" width= "80%">
+
+- SuperCollider: When you receive a Tidal playback control instruction starting with /playback, you can divert it to the port used by Tidal on your PC.
+
+	```
+	(
+	var addr = NetAddr.new("127.0.0.1", 6010); // The destination is the port used by Tidal on your own PC
+
+	o = OSCFunc({
+		arg msg;
+		if (msg.size == 2, { // When OSC message size is 2,
+			addr.sendMsg(msg[1]); // send only the first of messages.
+		}, {
+			if (msg.size == 3, { // When OSC message size is 3,
+			addr.sendMsg(msg[1], msg[2]).postln; // Send message #1, #2.
+			})
+		} )
+	},'/playback');
+	)
+	```
