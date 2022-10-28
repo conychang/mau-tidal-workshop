@@ -111,3 +111,26 @@ o = OSCFunc(
 
 );
 )
+
+// 6010
+(
+o = OSCFunc(
+
+	{
+		arg msg;
+		(type: \dirt, dirt: ~dirt, s: \808, speed: msg[1].asFloat,
+		 gain: 2, n: [0,5,10].rand).play;
+	}
+	, '/808'
+
+);
+)
+
+(
+var addr = NetAddr.new("127.0.0.1", 6010);
+
+o = OSCFunc({
+	arg msg;
+	addr.sendBundle(msg);
+},'/playback');
+)

@@ -203,7 +203,8 @@ o = OSCFunc({ arg msg, time, addr, recvPort; [msg, time, addr, recvPort].postln;
 
 ### ★ SuperCollider(SuperDirt)側のポート6010を使う
 
-SuperCollider(SuperDirt)側のポート`6010`に送るとプレイバックのコントロールが可能です。特にSuperCollider側で準備をする必要はなし。
+[22/10/29訂正]TidalCyclesが動いているコンピュータでlocalhostの`6010`(TidalCyclces側のポート)に送るとプレイバックのコントロールが可能なメッセージがあります。
+
 - `/mute 1`, `/unmute 1`: TidalCyclesでの`d1`をミュートしたりミュート解除したりできます。
 - `/solo 1`, `/unsolo 1`: TidalCyclesでの`d1`をソロ状態にしたりソロ状態の解除をしたりできます。
 - `/solo hat`, `/unsolo hat`: `p "hat"`をソロ状態にしたりソロ状態を解除したりできます。`mute`も然り。
@@ -214,3 +215,22 @@ SuperCollider(SuperDirt)側のポート`6010`に送るとプレイバックの�
 - Max<br>
 
   <img src="max_playbackctrl.png" width= "50%">
+
+相手からメッセージを受け取ったら、それをlocalhostの`6010`に転送すればTidalCyclesのプレイバックコントロールを他の人に任せることも可能というわけです。
+
+- SuperCollider: /playback から始まるTidalのプレイバックコントロールの命令を受け取ったら、自分のPCのTidalが使っているポートにそれを横流しする。
+
+	```
+	(
+	var addr = NetAddr.new("127.0.0.1", 6010); // 送り先は自分のPCのTidalが使っているポート
+
+	o = OSCFunc({
+		arg msg;
+		addr.sendMsg(msg.removeAt(0)); // メッセージの頭にある"/playback"を取り除く
+	},'/playback');
+	)
+	```
+
+- Max: /playback から始まるメッセージでTidalのプレイバックコントロールができるコマンドを送る
+
+	<img src="max_playbackctrl_2.png" width= "80%">

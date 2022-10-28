@@ -21,24 +21,24 @@ var addr = NetAddr.new("127.0.0.1", 9000); // 相手のIPアドレスと送信�
 o = OSCFunc({
 arg msg, time;
 var gain = -1;
-	for (0, msg.size,
+for (0, msg.size,
+	{
+	arg i;
+	if (msg[i].asString == "sine")
 		{
-		arg i;
-		if (msg[i].asString == "sine")
-			{
-				for (0, msg.size,
-					{
-						arg i;
-					if (msg[i].asString == "gain")
-					{
-						gain = msg[i+1].asFloat;
-						gain.postln;
-						addr.sendMsg("/touch", gain);
-					}}
-				)
-	        }
-	     }
-	);
+			for (0, msg.size,
+				{
+					arg i;
+				if (msg[i].asString == "gain")
+				{
+					gain = msg[i+1].asFloat;
+					gain.postln;
+					addr.sendMsg("/touch", gain);
+				}}
+			)
+        }
+     }
+);
 },'/dirt/play');
 )
 
